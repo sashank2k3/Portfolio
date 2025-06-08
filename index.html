@@ -1,61 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Varanasi Sai Shashank | AI Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      line-height: 1.6;
+    }
+    header {
+      text-align: center;
+      padding: 60px 20px 30px;
+      background: rgba(0, 0, 0, 0.4);
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 600;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #00f2ff;
+      padding-bottom: 5px;
+    }
+    .project-card {
+      background: rgba(255, 255, 255, 0.08);
+      margin: 20px 0;
+      padding: 15px;
+      border-left: 4px solid #00f2ff;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+    .project-details {
+      display: none;
+      padding-top: 10px;
+      font-size: 0.95rem;
+      color: #ddd;
+    }
+    .contact-info {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 1rem;
+      color: #ccc;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #888;
+    }
+    a.project-link {
+      display: inline-block;
+      margin-top: 8px;
+      color: #00f2ff;
+      text-decoration: none;
+    }
+  </style>
+  <script>
+    function toggleDetails(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
 </head>
 <body>
+  <header>
+    <h1>Varanasi Sai Shashank</h1>
+    <p>AI/ML Developer | Python Enthusiast | Web Developer</p>
+  </header>
 
-<h1>Shashank Varanasi</h1>
-<p> I am a tech enthusiast skilled in Python, Web Development, Artificial Intelligence, and Machine Learning. Experienced in developing innovative solutions 
-    like fake profile detection and bankruptcy risk forecast models. Committed to continuous learning and growth in the field of technology.</p>
-<pre>
-<a href="https://www.linkedin.com/in/shashank-varanasi-7b1b3b1b3/">LinkedIn</a>          <a href="https://github.com/sashank2k3">Github</a>             <a href="https://twitter.com/sashank2k3">Twitter</a>
-</pre>
-<hr>
-<h2>Education</h2>
-<p><b>Degree</b></p>
-<pre>
-<P>Malla Reddy University      AIML     9.02</p></pre>
-<ul>
-    <li>Machine Learning</li>
-    <li>Deep Learning</li>
-    <li>Python</li>
-</ul>
-<p><b>Intermediate</b></p>
+  <section>
+    <h2>About Me</h2>
+    <p>I am a passionate tech enthusiast with a B.Tech in Artificial Intelligence and Machine Learning from Malla Reddy University (CGPA: 9.02). My goal is to build impactful solutions in AI and software engineering. I thrive on challenges and love learning new tools to solve real-world problems.</p>
+  </section>
 
-<P><pre>Narayana Jr College          MPC      94.3</p></pre>
-<ul>
-    <li>Maths</li>
-    <li>Physics</li>
-    <li>Chemistry</li>
-</ul>
-<p><b>School</b></p>
-<pre>
-<P>Sri Chaithanya High School    SSC      9.8</p></pre>
-<hr>
+  <section>
+    <h2>Projects</h2>
 
-<h2>Skills</h1>
-<p><b>Programming Languages</b></p>
-<ul>
-    <li>Python</li>
-    <li>Java</li>
-    <li>C</li>
-</ul>
-<p><b>Web Technologies</b></p>
-<ul>
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>JavaScript</li>
-</ul>
-<hr>
-<h2>Projects</h2>
-<ol>
-    <li>Bankruptcy Risk Forecast Model</li>
-    <li>Fake Profile Detection</li>
-    <li>TTS and STT</li>
-    <li>Driver Drowsiness</li>
-</ol>
+    <div class="project-card" onclick="toggleDetails('proj1')">
+      <h3>Driver Monitoring System</h3>
+      <p>Detects driver fatigue and drowsiness in real-time.</p>
+      <div class="project-details" id="proj1">
+        <p>Built using Python, OpenCV, Dlib, and CNN. Uses Eye Aspect Ratio (EAR) and Head Pose Estimation to track alertness in real-time video feeds. Helps improve road safety by preventing accidents caused by drowsy driving.</p>
+        <a href="#" class="project-link" target="_blank">Project URL</a>
+      </div>
+    </div>
+
+    <div class="project-card" onclick="toggleDetails('proj2')">
+      <h3>TTS and STT using NLP</h3>
+      <p>Text-to-speech and speech-to-text interface.</p>
+      <div class="project-details" id="proj2">
+        <p>Implemented using Python, pyttsx3, and speech_recognition. Enables machines to convert voice input into text and vice versa, improving human-computer interaction through natural language understanding.</p>
+        <a href="#" class="project-link" target="_blank">Project URL</a>
+      </div>
+    </div>
+
+    <div class="project-card" onclick="toggleDetails('proj3')">
+      <h3>Fake Instagram Profile Detection</h3>
+      <p>ML model that detects fake profiles.</p>
+      <div class="project-details" id="proj3">
+        <p>Uses Random Forest algorithm in Python. Analyzes profile features like followers, following, bio content, and post frequency to detect if a profile is likely fake or genuine.</p>
+        <a href="#" class="project-link" target="_blank">Project URL</a>
+      </div>
+    </div>
+
+    <div class="project-card" onclick="toggleDetails('proj4')">
+      <h3>Bankruptcy Risk Forecast</h3>
+      <p>Predicts company financial failure.</p>
+      <div class="project-details" id="proj4">
+        <p>Built with Support Vector Machine (SVM) to classify companies based on financial indicators. The model predicts potential bankruptcy risks and helps in financial forecasting.</p>
+        <a href="#" class="project-link" target="_blank">Project URL</a>
+      </div>
+    </div>
+
+  </section>
+
+  <section>
+    <h2>Internship</h2>
+    <p><strong>Salesforce Intern (May 2024 - July 2024):</strong> Developed Lightning Web Components and Visualforce pages to enhance dashboards.</p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <div class="contact-info">
+      <span>📞 +91-8374661598</span>
+      <span>📧 sashank.varanasi@gmail.com</span>
+      <span>📍 Hyderabad, India</span>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Varanasi Sai Shashank. All rights reserved.</p>
+  </footer>
 </body>
 </html>
